@@ -1,5 +1,5 @@
 set :stage, :staging
-set :public_symlink_location, -> {"/home/#{fetch(:username)}/otherSubfolderLocationForStagingIfApplicable/public_html"}
+# set :public_symlink_location, -> {"/home/#{fetch(:username)}/otherSubfolderLocationForStagingIfApplicable/public_html"}
 
 # Simple Role Syntax
 # ==================

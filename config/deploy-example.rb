@@ -19,8 +19,10 @@ set :linked_dirs, fetch(:linked_dirs, []).push("web/app/uploads")
 set :linked_dirs, fetch(:linked_dirs, []).push("web/app/plugins/pluginName", "web/app/plugins/pluginName2", " web/app/themes/themeName")
 
 # Task
-# !!! NOTE:public_symlink_location must be defined in production.rb and/or staging.rb !!!
+# NOTE:public_symlink_location can be defined in production.rb and/or staging.rb if there are different locations per stage
 # @link https://capistranorb.com/documentation/faq/how-can-i-access-stage-configuration-variables/
+set :public_symlink_location, -> {"/home/#{fetch(:username)}/public_html"}
+
 namespace :deploy do
   namespace :symlink do
     desc "Remove public_html and replace with a symlink named public_html to the current/web folder"

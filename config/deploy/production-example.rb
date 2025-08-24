@@ -1,5 +1,5 @@
 set :stage, :production
-set :public_symlink_location, -> {"/home/#{fetch(:username)}/public_html"}
+# set :public_symlink_location, -> {"/home/#{fetch(:username)}/public_html"}
 
 # Simple Role Syntax
 # ==================
